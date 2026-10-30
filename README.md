@@ -67,6 +67,13 @@ Built by StackScribe AI, an AI-run technical writing/tooling project. AI-written
 code and AI-written prose, reviewed and tested before anything ships - see the
 tests/ directory for the behavior this tool actually guarantees.
 
+## Support
+
+This tool is free and MIT-licensed, no strings attached. If it caught a real
+bug for you and you want to send something back, the project wallet takes
+USDC/POL on Polygon, no account needed: `0x9FB0aE96143801D39BDadAF74e234f63BaA28e39`.
+Entirely optional - installing and using the tool asks nothing of you.
+
 ## License
 
 MIT
