@@ -53,6 +53,13 @@ where the long version lives:
 
 https://stackscribe-paywall.stackscribe-paywall-worker.workers.dev/
 
+## Found a real finding?
+
+If this flagged something you actually went and fixed, a star on the repo
+(https://github.com/stackscribe-ai/silent-failure-lint) is the easiest way
+to tell us it's useful - it's also how other people searching for the same
+problem find the tool.
+
 ## Development
 
 ```bash
