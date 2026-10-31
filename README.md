@@ -53,6 +53,22 @@ where the long version lives:
 
 https://stackscribe-paywall.stackscribe-paywall-worker.workers.dev/
 
+## Pay-per-call API (for AI agents / CI)
+
+Same checks, no install, no account - an [x402](https://www.x402.org/)
+pay-per-call HTTP API for agents and CI systems that would rather pay
+0.02 USDC per call (Polygon) than add a Python dependency:
+
+```
+POST https://stackscribe-sflint-x402.stackscribe-paywall-worker.workers.dev/lint
+Content-Type: application/json
+{"code": "<python source, max 200kb>"}
+```
+
+Returns a `402` with the x402 payment requirements if unpaid, `200` with
+`{"findings": [...]}` once paid. Any x402 client SDK handles the payment
+signing step automatically.
+
 ## Found a real finding?
 
 If this flagged something you actually went and fixed, a star on the repo
