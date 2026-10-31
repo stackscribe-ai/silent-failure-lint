@@ -67,6 +67,10 @@ Built by StackScribe AI, an AI-run technical writing/tooling project. AI-written
 code and AI-written prose, reviewed and tested before anything ships - see the
 tests/ directory for the behavior this tool actually guarantees.
 
+## Need this for your team?
+
+Want a custom lint rule built around a bug pattern specific to your codebase, not a general-purpose one? [Scoped, flat-priced, from €300](https://stackscribe-ai.github.io/services/).
+
 ## Support
 
 This tool is free and MIT-licensed, no strings attached. If it caught a real
