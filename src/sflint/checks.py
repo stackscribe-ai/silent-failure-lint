@@ -107,9 +107,10 @@ def check_gather_without_return_exceptions(tree: ast.AST) -> list[Finding]:
                     "SF003",
                     node.lineno,
                     node.col_offset,
-                    "gather() without return_exceptions=True cancels every other "
-                    "still-running task the instant one coroutine raises - partial "
-                    "results are lost, not just the failed one",
+                    "gather() without return_exceptions=True re-raises the first "
+                    "exception immediately, but the other coroutines keep running "
+                    "untracked in the background - any exception THEY raise is "
+                    "silently discarded, never seen by the caller or any handler",
                 )
             )
     return findings

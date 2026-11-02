@@ -7,7 +7,7 @@ errors but actually throws them away. It flags five specific shapes:
 |------|------------------|
 | `SF001` | `except Exception: pass` (or an equivalent no-op) that swallows the error with no log, re-raise or fallback |
 | `SF002` | `asyncio.create_task(...)` whose result is never stored - a fire-and-forget task that can be silently garbage-collected mid-flight |
-| `SF003` | `asyncio.gather(...)` without `return_exceptions=True` - one failing coroutine cancels every sibling, losing their partial results too |
+| `SF003` | `asyncio.gather(...)` without `return_exceptions=True` - the first exception re-raises immediately, but siblings keep running untracked and any exception *they* raise is silently discarded |
 | `SF004` | `requests`/`httpx`-style HTTP calls with no `timeout=` - a hanging peer holds the connection (and its pool slot) forever |
 | `SF005` | A retry loop that sleeps a fixed amount with no backoff/jitter - every failed client retries in lockstep (thundering herd) |
 
