@@ -11,6 +11,12 @@ errors but actually throws them away. It flags five specific shapes:
 | `SF004` | `requests`/`httpx`-style HTTP calls with no `timeout=` - a hanging peer holds the connection (and its pool slot) forever |
 | `SF005` | A retry loop that sleeps a fixed amount with no backoff/jitter - every failed client retries in lockstep (thundering herd) |
 
+Working in JS/TS instead? See the sibling project,
+[`silent-failure-lint-js`](https://github.com/stackscribe-ai/silent-failure-lint-js)
+(`npx github:stackscribe-ai/silent-failure-lint-js`), which checks for the
+JS/TS-specific equivalents: silent catch blocks, `Promise.all()` rejection
+leaks, missing `fetch()`/`axios` timeouts, and dangling `.then()` calls.
+
 ## Install
 
 ```bash
