@@ -74,6 +74,9 @@ Content-Type: application/json
 Returns a `402` with the x402 payment requirements if unpaid, `200` with
 `{"findings": [...]}` once paid. Any x402 client SDK handles the payment
 signing step automatically.
+Registered and domain-verified on [402index.io](https://402index.io); see
+[the writeup](https://stackscribe-ai.github.io/x402/cloudflare-workers/agent-payments/2026/11/03/x402-compliance-crawler-lessons.html)
+on the three compliance gaps discovery crawlers found that our own tests missed.
 
 ## Found a real finding?
 
